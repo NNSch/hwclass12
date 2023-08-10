@@ -9,6 +9,7 @@ public class MoviesTest {
         String[] actual = manager.findAll();
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
     public void FilmsAddOneTest() {
         ManagerMovies manager = new ManagerMovies();
@@ -17,6 +18,7 @@ public class MoviesTest {
         String[] actual = manager.findAll();
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
     public void FilmAddThreeTest() {
         ManagerMovies manager = new ManagerMovies();
@@ -26,7 +28,9 @@ public class MoviesTest {
         String[] expected = {" Блатшот ", " Вперёд ", " Отель Белград "};
         String[] actual = manager.findAll();
         Assertions.assertArrayEquals(expected, actual);
-    }@Test
+    }
+
+    @Test
     public void FilmAddFifeTest() {
         ManagerMovies manager = new ManagerMovies();
         manager.add(" Блатшот ");
@@ -38,6 +42,7 @@ public class MoviesTest {
         String[] actual = manager.findAll();
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
     public void findLastTest() {
         ManagerMovies manager = new ManagerMovies();
@@ -52,6 +57,7 @@ public class MoviesTest {
         String[] expected = {" Номер один ", " Тролли. Мировой тур ", " Человек-невидимка ", " Джентельмены ", " Отель Белград "};
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
     public void findLastLimitThreeTest() {
         ManagerMovies manager = new ManagerMovies(3);
@@ -66,6 +72,7 @@ public class MoviesTest {
         String[] expected = {" Номер один ", " Тролли. Мировой тур ", " Человек-невидимка "};
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
     public void findLastLimitOneTest() {
         ManagerMovies manager = new ManagerMovies(1);
@@ -80,6 +87,7 @@ public class MoviesTest {
         String[] expected = {" Номер один "};
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
     public void findLastLimitSevenTest() {
         ManagerMovies manager = new ManagerMovies(7);
@@ -94,6 +102,7 @@ public class MoviesTest {
         String[] expected = {" Номер один ", " Тролли. Мировой тур ", " Человек-невидимка ", " Джентельмены ", " Отель Белград ", " Вперёд ", " Блатшот "};
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
     public void resultLengthTest() {
         ManagerMovies manager = new ManagerMovies(7);
